@@ -9,7 +9,8 @@ public class media_idade {
         List <Integer> numPeople = new ArrayList<>(); //quantidade de pessoas  
         //int numPeople; //quantidade de pessoas
         int listSize; //tamanho da lista
-        int med;
+        int sumAge = 0; //armazena a soma entre idades
+        int med; //média entre idades
 
         
         /*
@@ -21,6 +22,7 @@ public class media_idade {
             System.out.print("Digite a idade: ");
             age = Read.nextInt();
 
+            sumAge = sumAge + age;
             numPeople.add(age);
             listSize = numPeople.size();
 
@@ -46,12 +48,13 @@ public class media_idade {
             }
             */
 
+            System.out.print("Digite um número negativo para calcular a média entre esses números");
 
         } while(age >= 0);
 
         listSize = listSize - 1;
         
-        med = (numPeople.get(0) + numPeople.get(1)) / listSize;
+        med = sumAge / listSize;
 
         System.out.print("A média entre essas idades é: " + med);
 /*
