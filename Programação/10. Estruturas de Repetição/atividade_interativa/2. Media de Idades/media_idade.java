@@ -1,10 +1,8 @@
-package atividade_interativa;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class idade {
+public class media_idade {
     public static void main(String[] args) {
         Scanner Read = new Scanner(System.in);
         int age;
