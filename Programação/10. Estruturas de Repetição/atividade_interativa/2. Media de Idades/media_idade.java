@@ -19,23 +19,29 @@ public class media_idade {
         */
 
         do {
+            //System.out.println("=== Digite um valor negativo para calcular a média entre esses números. ===");
+
             System.out.print("Digite a idade: ");
             age = Read.nextInt();
 
-            sumAge = sumAge + age;
+            if(age >= 0) {
+                sumAge = sumAge + age;
+            }
+
             numPeople.add(age);
             listSize = numPeople.size();
 
-            /*
-            if (listSize < 0) {
-                listSize = listSize - 1;
-            } else 
-            */
 
-            if(listSize == 1) {
+
+            if (age < 0) {
+                listSize = listSize - 1;
+            } else if(listSize == 1) {
                 System.out.println("Lista atualizada, agora a lista possui " + listSize + " item. ");
+                System.out.println(" ");
+
             } else {
                 System.out.println("Lista atualizada, agora a lista possui " + listSize + " itens. ");
+                System.out.println(" ");
             }
 
 
@@ -48,11 +54,11 @@ public class media_idade {
             }
             */
 
-            System.out.print("Digite um número negativo para calcular a média entre esses números");
+
 
         } while(age >= 0);
 
-        listSize = listSize - 1;
+        //listSize = listSize - 1;
         
         med = sumAge / listSize;
 
