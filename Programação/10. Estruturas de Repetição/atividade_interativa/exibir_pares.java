@@ -11,6 +11,10 @@ public class exibir_pares {
         System.out.print("Digite um número: ");
         number = Read.nextInt();
 
+        while (number < 0) {
+            System.out.println("Número inválido! Por favor, digite um número positivo: ");
+            number = Read.nextInt();
+        }
 //        System.out.println(0);
 
         while(i <= number){
