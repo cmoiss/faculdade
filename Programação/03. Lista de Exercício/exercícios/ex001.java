@@ -16,7 +16,7 @@ public class ex001 {
         System.out.print("Digite o ponto y2 de B: ");
         y2 = Ler.nextInt();
 
-        distancia = (x2 - x2) + (y2 - y1);
+        distancia = (x2 - x1) + (y2 - y1);
         System.out.print("A distância entre os pontos A e B é de: " + distancia);
 
         Ler.close();
