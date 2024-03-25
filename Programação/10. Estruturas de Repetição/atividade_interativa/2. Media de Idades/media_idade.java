@@ -7,20 +7,12 @@ public class media_idade {
         Scanner Read = new Scanner(System.in);
         int age;
         List <Integer> numPeople = new ArrayList<>(); //quantidade de pessoas  
-        //int numPeople; //quantidade de pessoas
         int listSize; //tamanho da lista
         int sumAge = 0; //armazena a soma entre idades
         int med; //média entre idades
 
-        
-        /*
-        System.out.print("Digite a quantidade de pessoas: ");
-        numPeople = Read.nextInt();
-        */
 
         do {
-            //System.out.println("=== Digite um valor negativo para calcular a média entre esses números. ===");
-
             System.out.print("Digite a idade: ");
             age = Read.nextInt();
 
@@ -43,40 +35,11 @@ public class media_idade {
                 System.out.println("Lista atualizada, agora a lista possui " + listSize + " itens. ");
                 System.out.println(" ");
             }
-
-
-
-            /*
-            if (numPeople.get(age) > 1) {
-                System.out.println("Lista atualizada, agora a lista possui " + numPeople.size() + " itens. ");
-            } else {
-                System.out.println("Lista atualizada, agora a lista possui " + numPeople.size() + " item. ");
-            }
-            */
-
-
-
         } while(age >= 0);
-
-        //listSize = listSize - 1;
         
         med = sumAge / listSize;
 
         System.out.print("A média entre essas idades é: " + med);
-/*
-        for(numPeople = 0; age < 0; numPeople++) {
-
-        }
-*/
-
-/*
-        while (age >= 0) {
-            System.out.println("Digite a idade: ");
-            age = Read.nextInt(); 
-        }
-*/
-
         Read.close();
-        
     }
 }
