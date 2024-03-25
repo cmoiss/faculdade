@@ -21,6 +21,8 @@ public class exibir_pares {
             i++;
         }
 
+        Read.close();
+
 /*
         for(i=1; limit == number; i++){
             
