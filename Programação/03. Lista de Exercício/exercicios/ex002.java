@@ -1,11 +1,11 @@
-//package exercicios;
+package exercicios;
 
 import java.util.Scanner;
 //import exercicios.ex001;
 
 public class ex002 {
     public static void main(String[] args){
-        int a, b, c, d;
+        int a, b, c;
         Scanner Read = new Scanner(System.in);
 
         do {
@@ -27,6 +27,8 @@ public class ex002 {
 
         calculo_R(a, b);
         calculo_S(b, c);
+
+        calculo_D(calculo_R(a, b), calculo_S(b, c));
     }
 
     public static int calculo_R(int a, int b){
@@ -39,5 +41,11 @@ public class ex002 {
         //S = (B + C)²
         double s = Math.pow((b + c), 2);
         return (int) s;
+    }
+
+    public static void calculo_D(int r, int s) {
+        //d = (R + S) / 2;
+        float d = (r + s) / 2;
+        System.out.print("O resultado de D é : " );
     }
 }
