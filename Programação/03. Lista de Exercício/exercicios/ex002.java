@@ -29,6 +29,8 @@ public class ex002 {
         calculo_S(b, c);
 
         calculo_D(calculo_R(a, b), calculo_S(b, c));
+
+        Read.close();
     }
 
     public static int calculo_R(int a, int b){
@@ -46,6 +48,6 @@ public class ex002 {
     public static void calculo_D(int r, int s) {
         //d = (R + S) / 2;
         float d = (r + s) / 2;
-        System.out.print("O resultado de D é : " );
+        System.out.print("O resultado de D é : " + d);
     }
 }
