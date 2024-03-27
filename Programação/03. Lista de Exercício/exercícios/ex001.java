@@ -4,18 +4,21 @@ public class ex001 {
     public static void main(String[] args) {
         Scanner Ler = new Scanner(System.in);
         int x1, y1, x2, y2, distancia;
-        int[] ponto_01 = new int[1];
-        int[] ponto_02 = new int[1];
+        int[] ponto_01 = new int[2];
+        int[] ponto_02 = new int[2];
         
         System.out.println("Digite as coordenadas do ponto 1 (x1, y1)");
-        ponto_01[0] = Ler.nextInt();
-        ponto_01[1] = Ler.nextInt();
+        x1 = Ler.nextInt();
+        x2 = Ler.nextInt();
+
+        ponto_01[0] = x1;
+        ponto_01[1] = x2;
         
         x1 = ponto_01[0];
         //x2 = ponto_01[1];
         
         System.out.print(ponto_01[0] + ponto_01[1]);
-      
+        
         Ler.close();
     }
 }
