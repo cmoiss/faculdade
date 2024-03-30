@@ -14,7 +14,8 @@ public class ex003 {
 
             if (years < 0) {
                 voidSpace();
-                invalidValue(1); // "value" 1: ano
+                System.out.println("Valor inválido! Não existe 'ano negativo'. Portanto digite um número maior ou igual a 0.");
+                //invalidValue(1); // "value" 1: ano
             }
         } while (years < 0);
 
@@ -23,17 +24,20 @@ public class ex003 {
             months = Read.nextInt();
         } else {
             do {
+                if (years == 1) {
+                    System.out.print("Você tem 1 ano e quantos meses? ");
+                months = Read.nextInt();
+                }
                 System.out.print("Você tem " + years + " anos e quantos meses? ");
                 months = Read.nextInt();
     
                 if (months < 0) {
                     voidSpace();
-                    invalidValue(2); // "value" 2: mês
-                }
-            } while (years < 0);
+                    System.out.println("Valor inválido! Não existe 'mês negativo'. Portanto digite um número maior ou igual a 0.");
 
-            System.out.print("Você tem " + years + " anos e quantos meses? ");
-            months = Read.nextInt();
+                    //invalidValue(2); // "value" 2: mês
+                }
+            } while (months < 0);
         }
         
 
@@ -55,6 +59,7 @@ public class ex003 {
         System.out.println(" ");
     }   
 
+    /*
     public static void invalidValue(String value) {
         switch (value) {
             case "1":
@@ -75,4 +80,5 @@ public class ex003 {
 
         System.out.println("Valor inválido! Não existe '" + value + " negativo'. Portanto digite um número maior ou igual a 0.");
     }
+    */
 }
