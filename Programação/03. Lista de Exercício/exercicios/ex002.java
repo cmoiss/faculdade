@@ -1,5 +1,3 @@
-package exercicios;
-
 import java.util.Scanner;
 //import exercicios.ex001;
 
