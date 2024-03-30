@@ -8,11 +8,36 @@ public class ex003 {
 
         //System.out.print("Digite sua idade em ");
         
-        System.out.print("Digite quantos anos você tem: ");
-        years = Read.nextInt();
+        do {
+            System.out.print("Digite quantos anos você tem: ");
+            years = Read.nextInt();
 
-        System.out.print("Você tem " + years + " anos e quantos meses? ");
-        months = Read.nextInt();
+            if (years < 0) {
+                voidSpace();
+                invalidValue(1); // "value" 1: ano
+            }
+        } while (years < 0);
+
+        if(years == 1) {
+            System.out.print("Você tem 1 ano e quantos meses? ");
+            months = Read.nextInt();
+        } else {
+            do {
+                System.out.print("Você tem " + years + " anos e quantos meses? ");
+                months = Read.nextInt();
+    
+                if (months < 0) {
+                    voidSpace();
+                    invalidValue(2); // "value" 2: mês
+                }
+            } while (years < 0);
+
+            System.out.print("Você tem " + years + " anos e quantos meses? ");
+            months = Read.nextInt();
+        }
+        
+
+
 
         System.out.print("Ótimo! Você tem " + years + " anos, " + months + " meses e quantos dias? ");
         days = Read.nextInt();
@@ -24,5 +49,30 @@ public class ex003 {
         System.out.println("Sua idade convertida em dias é: " + ageInDays);
 
         Read.close();
+    }
+
+    public static void voidSpace() {
+        System.out.println(" ");
+    }   
+
+    public static void invalidValue(String value) {
+        switch (value) {
+            case "1":
+                value = "ano";
+                break;
+
+            case "2":
+                value = "mês";
+                break;
+
+            case "3":
+                value = "dia";
+                break;
+        
+            default:
+                break;
+        }
+
+        System.out.println("Valor inválido! Não existe '" + value + " negativo'. Portanto digite um número maior ou igual a 0.");
     }
 }
