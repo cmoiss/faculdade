@@ -19,8 +19,13 @@ public class ex003 {
         } while(years < 0);      
 
         do{
-            System.out.print("Você tem " + years + " anos e quantos meses? ");
-            months = Read.nextInt();
+            if (years == 1) {
+                System.out.print("Você tem 1 ano e quantos meses? ");
+                months = Read.nextInt();
+            } else {
+                System.out.print("Você tem " + years + " anos e quantos meses? ");
+                months = Read.nextInt();
+            }
 
             if(months < 0) {
                 voidSpace();
@@ -58,6 +63,8 @@ public class ex003 {
     - método voidSpace();
 
 - ano OR anos
+    - alterar de acordo com o valor 
+
 - criar método invalidValue
     - mensagem diferente para erro
 
