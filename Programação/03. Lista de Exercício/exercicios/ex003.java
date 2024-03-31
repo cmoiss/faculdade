@@ -8,14 +8,35 @@ public class ex003 {
 
         //System.out.print("Digite sua idade em ");
         
-        System.out.print("Digite quantos anos você tem: ");
-        years = Read.nextInt();
+        do{
+            System.out.print("Digite quantos anos você tem: ");
+            years = Read.nextInt();
 
-        System.out.print("Você tem " + years + " anos e quantos meses? ");
-        months = Read.nextInt();
+            if(years < 0) {
+                voidSpace();
+                System.out.println("Valor inválido! Digite um número maior ou igual a zero.");
+            }
+        } while(years < 0);      
 
-        System.out.print("Ótimo! Você tem " + years + " anos, " + months + " meses e quantos dias? ");
-        days = Read.nextInt();
+        do{
+            System.out.print("Você tem " + years + " anos e quantos meses? ");
+            months = Read.nextInt();
+
+            if(months < 0) {
+                voidSpace();
+                System.out.println("Valor inválido! Digite um número maior ou igual a zero.");
+            }
+        } while(months < 0);  
+
+        do{
+            System.out.print("Ótimo! Você tem " + years + " anos, " + months + " meses e quantos dias? ");
+            days = Read.nextInt();
+
+            if(days < 0) {
+                voidSpace();
+                System.out.println("Valor inválido! Digite um número maior ou igual a zero.");
+            }
+        } while(days < 0);
 
         yearsToDays = years * 365;
         monthsToDays = months * 30;
@@ -25,4 +46,19 @@ public class ex003 {
 
         Read.close();
     }
+    public static void voidSpace() {
+        System.out.println("");
+    }
 }
+
+/*
+
+=== FUNÇÕES EXTRAS ===
+- invalidar input é negativo
+    - método voidSpace();
+
+- ano OR anos
+- criar método invalidValue
+    - mensagem diferente para erro
+
+*/
