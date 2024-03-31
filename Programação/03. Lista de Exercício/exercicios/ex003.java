@@ -34,6 +34,15 @@ public class ex003 {
         } while(months < 0);  
 
         do{
+            if (years == 1) {
+                String mensageYears = "1 ano";
+            if (months == 1) {
+                    System.out.print("Ótimo! Você tem 1 ano, 1 mês e quantos dias? ");
+                    days = Read.nextInt();
+                } else {
+
+                }
+            }
             System.out.print("Ótimo! Você tem " + years + " anos, " + months + " meses e quantos dias? ");
             days = Read.nextInt();
 
