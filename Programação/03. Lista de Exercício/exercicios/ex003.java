@@ -59,13 +59,14 @@ public class ex003 {
 /*
 
 === FUNÇÕES EXTRAS ===
+- método voidSpace();
 - invalidar input é negativo
-    - método voidSpace();
 
 - ano OR anos
     - alterar de acordo com o valor 
 
 - criar método invalidValue
     - mensagem diferente para erro
+======================
 
 */
