@@ -1,18 +1,30 @@
 //package 2. media_elementos;
 
+import java.util.Scanner;
+
 public class media_elementos {
     public static void main(String[] args) {
-        float[] array = {4, 5, 7};
-        float sum = 0;
-        float med;
+        Scanner Read = new Scanner(System.in);
+        int elementsNumber;
+        float[] array;
+        float sum = 0, med, elementsValue; //soma dos elementos, média, valores dos elementos
 
-        for(int i = 0; i < 3; i++){
-            System.out.println(array[i]);
+        System.out.print("Digite a quantidade de elementos a serem lidos: ");
+        elementsNumber = Read.nextInt();
+        array = new float[elementsNumber];
+
+        for(int i = 0; i < elementsNumber; i++){
+            System.out.print("Digite um valor: ");
+            elementsValue = Read.nextFloat();
+            array[i] = elementsValue;
+
             sum += array[i]; 
         }
 
-        med = sum / 3;
+        med = sum / elementsNumber;
+        
         System.out.println("");
         System.out.println("A média entre esses números é: " + med);
+        Read.close();
     }
 }
