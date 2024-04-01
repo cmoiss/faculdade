@@ -58,7 +58,7 @@ public class ex003 {
 
 /*
 
-=== FUNÇÕES EXTRAS ===
+=== ACRESCENTAR FUNÇÕES EXTRAS ===
 - método voidSpace();
 - invalidar input é negativo
 
