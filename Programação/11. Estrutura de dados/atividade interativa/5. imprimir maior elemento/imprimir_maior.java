@@ -17,7 +17,5 @@ public class imprimir_maior {
         }
 
         System.out.println("O maior elemento é: " + higher);
-
-        
     }
 }
