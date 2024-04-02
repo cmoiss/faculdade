@@ -9,7 +9,7 @@ public class verificar_vetores {
             System.out.print("Escolha um numero de 1 a 10: ");
             entrada = Ler.nextInt();
             
-            for(int i = 0; i <= primos.length; i++) {
+            for(int i = 0; i < primos.length; i++) {
                 if(entrada == primos[i]) {
                     System.out.println("Esse número é primo");
                 }
