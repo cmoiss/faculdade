@@ -7,4 +7,8 @@ public class Calculo extends Retangulo {
 
         System.out.print("A área desse retângulo é: " + area);   
     }
+
+    private void calcularPerimetro() {
+    
+    }
 }
