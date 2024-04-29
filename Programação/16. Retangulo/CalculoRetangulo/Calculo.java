@@ -15,4 +15,12 @@ public class Calculo extends Retangulo {
 
         System.out.print("O perímetro desse retângulo é: " + perimetro);   
     }
+
+    public void getCalcularArea(float largura, float altura) {
+        calcularArea(largura, altura);
+    }
+
+    public void getCalcularPerimetro(float largura, float altura) {
+        calcularPerimetro(largura, altura);
+    }
 }
