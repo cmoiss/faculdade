@@ -11,7 +11,7 @@ public class Calculo extends Retangulo {
     private float calcularPerimetro(float largura, float altura) {
         this.largura = largura;
         this.altura = altura;
-        float perimetro = largura * altura;    
+        float perimetro = 2 * (largura + altura);    
 
         return perimetro;
     }
