@@ -1,0 +1,64 @@
+Loja do Glauber
+Glauber's Fruit
+
+[LOJA ONLINE]
+Galvão Hortifruti
+	Glauber é um produtor rural e possui um mercadinho muito famoso Pium, porém está com dificuldade no gerenciamento de sua loja.
+	Sistema de uma loja de fruta, no qual o usuário do sistema é o funcionário. O sistema possui um controle de estoque no qual o usuário poderá verificar a disponibilidade dos produtos. Além disso, terá um alerta de reabastecimento do estoque. Há a possibilidade de efetuar encomendas por telefone/whatsapp, o comprador poderá escolher a forma de entrega. O sistema deve alertar o usuário se está cadastrado ou não e mostrar a opção de cadastrar, usuário não cadastrado não pode realizar compras mas pode vizualizar os produtos. 
+	
+  	
+	Ovo de codorna
+	Ovo de galinha
+	Tilápia
+	Alface
+	Tomate cereja
+	
+
+
+[Classe] Produto
+	- Nome
+	- Preço
+	- Categoria
+	- Quantidade
+	+ Vizualizar produto
+	+ Adicionar/remover itens ao carrinho
+
+[Classe] Sistema de estoque
+	- Quantidade
+	+ Consultar estoque
+	+ Alerta de reabastecimento	
+
+[Classe] Caixa - Sistema de carrinho
+	+ Vizualizar produtos
+	+ vizualiza qtd. produtos
+	+ Adicionar/remover itens ao carrinho
+	+ Finalizar compra
+	+ Calcular subtotal
+	+ Validar CPF
+
+[Classe] Pagamento
+	- Método de pagamento
+	+ Validar cartão 
+	+ Emitir comprovante
+	
+[Classe] Cadastro
+Login:
+	- Nome
+	- Email
+	- CPF
+	- Telefone
+	- Endereço
+	- Senha
+	
+	+ Fazer cadastro
+	+ Fazer login
+	+ Validar CPF
+
+[Classe] Entrega
+- Opção de entrega
+	- Delivery
+	- Retirar na loja
+	+ Calcular frete
+	+ Fazer entrega 
+
+
