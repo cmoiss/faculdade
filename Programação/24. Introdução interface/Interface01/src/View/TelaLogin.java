@@ -64,6 +64,11 @@ public class TelaLogin extends javax.swing.JFrame {
                 buttonEnterActionPerformed(evt);
             }
         });
+        buttonEnter.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                buttonEnterKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -125,7 +130,19 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_campUserActionPerformed
 
     private void buttonEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnterActionPerformed
+        login();
+    }//GEN-LAST:event_buttonEnterActionPerformed
+
+    private void campPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campPasswordActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_campPasswordActionPerformed
+
+    private void buttonEnterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buttonEnterKeyPressed
+        login();
+    }//GEN-LAST:event_buttonEnterKeyPressed
+
+    private void login() {
+        //Efetua login
         String usuario = campUser.getText();
         String senha = campPassword.getText();
         
@@ -139,17 +156,17 @@ public class TelaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Preciso de usuário e senha!", "FALTAM DADOS!", JOptionPane.WARNING_MESSAGE);
         } else {
             if(usuario.equals(superUser) && senha.equals(superPass)) {
-                JOptionPane.showMessageDialog(null, "Usuário PERMITIDO, pode acessar o sistema!", "PERMISSÃO CONCEDIDA!", JOptionPane.INFORMATION_MESSAGE);
+                //JOptionPane.showMessageDialog(null, "Usuário PERMITIDO, pode acessar o sistema!", "PERMISSÃO CONCEDIDA!", JOptionPane.INFORMATION_MESSAGE);
+                CadastroPessoas newDialog = new CadastroPessoas(new javax.swing.JFrame(), true);
+                
+                //Deixa a tela de cadastro visível
+                newDialog.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Usuário INVÁLIDO, não é possível acessar o sistema!", "PERMISSÃO NEGADA!", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_buttonEnterActionPerformed
-
-    private void campPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campPasswordActionPerformed
-
+    }
+    
     /**
      * @param args the command line arguments
      */
